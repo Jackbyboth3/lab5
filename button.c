@@ -1,5 +1,4 @@
-/*
- * button.c
+/* * button.c
  *
  *  Created on: Jul 18, 2016
  *      Author: Eric Middleton, Zhao Zhang, Chad Nelson, & Zachary Glanz.
@@ -7,8 +6,6 @@
  *  @edit: Lindsey Sleeth and Sam Stifter on 02/04/2019
  *  @edit: Phillip Jone 05/30/2019: Mearged Spring 2019 version with Fall 2018
  */
- 
-
 
 //The buttons are on PORTE 3:0
 // GPIO_PORTE_DATA_R -- Name of the memory mapped register for GPIO Port E, 
@@ -19,50 +16,46 @@
 /**
  * Initialize PORTE and configure bits 0-3 to be used as inputs for the buttons.
  */
-void button_init() {
-	static uint8_t initialized = 0;
+void button_init()
+{
+    static uint8_t initialized = 0;
 
-	//Check if already initialized
-	if(initialized){
-		return;
-	}
+    //Check if already initialized
+    if (initialized)
+    {
+        return;
+    }
 
-	
+    // Reading: To initialize and configure GPIO PORTE, visit pg. 656 in the
+    // Tiva datasheet.
 
-	// Reading: To initialize and configure GPIO PORTE, visit pg. 656 in the 
-	// Tiva datasheet.
-	
-	// Follow steps in 10.3 for initialization and configuration. Some steps 
-	// have been outlined below.
-	
-	// Ignore all other steps in initialization and configuration that are not 
-	// listed below. You will learn more about additional steps in a later lab.
+    // Follow steps in 10.3 for initialization and configuration. Some steps
+    // have been outlined below.
 
-	// 1) Turn on PORTE system clock, do not modify other clock enables
-	SYSCTL_RCGCGPIO_R |=  4 << 5;
+    // Ignore all other steps in initialization and configuration that are not
+    // listed below. You will learn more about additional steps in a later lab.
 
-	// 2) Set the buttons as inputs, do not modify other PORTE wires
-	 GPIO_PORTE_DIR_R &= ((0 << 1 + 1 << 2 + 2 << 3 + 3 << 4));
-	
-	// 3) Enable digital functionality for button inputs, 
-	//    do not modify other PORTE enables
-	GPIO_PORTE_DEN_R |= 4;
+    // 1) Turn on PORTE system clock, do not modify other clock enables
+    SYSCTL_RCGCGPIO_R |= (1 << 4);
 
-	
-	initialized = 1;
+    // 2) Set the buttons as inputs, do not modify other PORTE wires
+    GPIO_PORTE_DIR_R &= ~0x0F;
+
+    // 3) Enable digital functionality for button inputs,
+    //    do not modify other PORTE enables
+    GPIO_PORTE_DEN_R |= 0x0F;
+
+    initialized = 1;
 }
-
-
 
 /**
  * Returns the position of the rightmost button being pushed.
  * @return the position of the righttmost button being pushed. 4 is the rightmost button, 1 is the leftmost button.  0 indicates no button being pressed
  */
-uint8_t button_getButton() {
+uint8_t button_getButton()
+{
 
-
-
-	//
+    //
 //	 DELETE ME - How bitmasking works
 //	 ----------------------------------------
 //	 In embedded programming, often we only care about one or a few bits in a piece of
@@ -97,39 +90,27 @@ uint8_t button_getButton() {
 //
 //	 INSERT CODE HERE!
 
-    //for loop through the number 1-4
-    //get buton
-    //if if button (i) is pressed{
-    //if if button (j) is pressed{
-    //shift left +i +1
 
-    //if j > i return j
-
-    unsigned char buttons ="a";
-
-  if (buttons & (1 << 3)){
-      return 4;
-     lcd_printf("4");
-  }
-
-  if (buttons & (1 << 2) ){
-      lcd_printf("3");
-       //return 3;
+    if ((GPIO_PORTE_DATA_R & 0b00001000)== 0b00000000)
+    {
+        return 4;
     }
-  if (buttons & (1 << 1) ){
-      lcd_printf("2");
-       //return 2;
+
+    else if ((GPIO_PORTE_DATA_R & 0b00000100)== 0b00000000)
+    {
+        return 3;
     }
-  if (buttons & (1 << 0)){
 
-         //return 1
-         lcd_printf("1");
-      }
+    else if ((GPIO_PORTE_DATA_R & 0b00000010)== 0b00000000)
+    {
+        return 2;
+    }
 
-	return 0; // if no button is pressed
+    else if ((GPIO_PORTE_DATA_R & 0b00000001)== 0b00000000)
+    {
+        return 1;
+    }
+
+    return 0; // if no button is pressed
 }
-
-
-
-
 

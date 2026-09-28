@@ -1,87 +1,54 @@
-// collision detection
+#include <stdio.h>
 
-/*
- * NOTES:
- * goes forward 2m until collision is detected, then if sensor left is pressed spin to the right 90 degrees, if right is pressed spin 90 to the left.
- * if both sensors are pressed attempt to move right, then keep going for 2 meters
- *
- */
-/*
- * part4.c
- *
- *  Created on: Sep 8, 2026
- *      Author: jackbyb
- */
+#include "Timer.h"
+#include "lcd.h"
+#include "cyBot_uart.h"
+#include "cyBot_Scan.h"
 
 
-#include "movement.h"
-#include "open_interface.h"
-#include <stdlib.h>
+int main(void)
+{
+    cyBOT_Scan_t scan;
 
-void turn(oi_t*sensor, int degrees) {
-    
+    timer_init();
+    lcd_init();
+    cyBot_uart_init();
 
-    int sum = 0;
+    cyBOT_init_Scan(0b0111);
 
-    //left wheel, right wheel
-    //left = forward ; right = backward
-    if (degrees > 0) {
-        oi_setWheels(-15, 15);
-    }
-    else {
-    oi_setWheels(-15, 15);
-    }
+    //temp for now
+    right_calibration_value = 311500;
+    left_calibration_value = 1309000;
 
-    while (abs(sum) < abs(degrees)){
-        oi_update(sensor);
-        sum+= sensor->angle;
+    while (1)
+    {
+        char command;
 
+        command = cyBot_getByte();
 
-    }
-    oi_setWheels(0,0);
-//    oi_free(0,0);
-}
+        if (command == 'm')
+        {
+            int angle;
+            char message[] = "Degrees distance (cm)\r\n";
 
-
-void move(oi_t*sensor,int centimeters){
-
-    double sum = 0;
-    oi_setWheels(250,250);
-     //Creates a variable to keep track of how far the robot has traveled.
-
-         //Tells both wheels to go forward at 500 mm/s.
-         //positive = forward ; max = 500mm/s
-
-
-           while (sum < centimeters){
-
-               oi_update(sensor); // get current state of all sensors
-                if (sensor->bumpRight || sensor->bumpLeft) {
-                   // back up and turn left
-                   int degrees = 0;
-                  if (sensor->bumpLeft && sensor->bumpRight) {
-                degrees = -90; 
-            } 
-            else if (sensor->bumpLeft) {
-                degrees = -90; 
-            } 
-            else if (sensor->bumpRight) {
-                degrees = 90;  
+            int i = 0;
+            for (i = 0; message[i] != '\0'; i++)
+            {
+                cyBot_sendByte(message[i]);
             }
+            for (angle = 0; angle <= 180; angle += 2)
+            {
+                cyBOT_Scan(angle, &scan);
+                char output[50];
 
-            oi_setWheels(-15, -15);
-            double back_sum = 0;
-            while (abs(back_sum) < 150) {
-                oi_update(sensor);
-                back_sum += sensor->distance; 
+                sprintf(output, "%d %.2f\r\n", angle, scan.sound_dist);
+
+                for (i = 0; output[i] != '\0'; i++)
+                {
+                    cyBot_sendByte(output[i]);
+                }
             }
-            turn(sensor, degrees);
-
-          
-            oi_setWheels(250, 250);
         }
-        sum += sensor->distance;
     }
-    oi_setWheels(0, 0);
-}
 
+}

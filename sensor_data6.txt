@@ -1,0 +1,195 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.23 13:11:59 =~=~=~=~=~=~=~=~=~=~=~=
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        114      96.78      55
+
+smallest object is: 0
+Point servo to angle: 114 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        180      116.48      180
+
+smallest object is: 0
+Point servo to angle: 180 degrees
+Object#  Angle  Distance  Width
+1        360      116.48      360
+
+smallest object is: 0
+Point servo to angle: 360 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        0      116.48      0
+
+smallest object is: 0
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        1      116.48      1
+2        43      126.03      -43
+
+smallest object is: 1
+Point servo to angle: 43 degrees
+Object#  Angle  Distance  Width
+1        1      116.48      1
+2        43      126.03      43
+
+smallest object is: 1
+Point servo to angle: 43 degrees
+Object#  Angle  Distance  Width
+1        35      116.48      35
+2        39      131.56      39
+
+smallest object is: 1
+Point servo to angle: 39 degrees
+Object#  Angle  Distance  Width
+1        35      116.48      145
+2        39      131.56      219
+
+smallest object is: 1
+Point servo to angle: 39 degrees
+Object#  Angle  Distance  Width
+1        35      116.48      145
+2        39      131.56      219
+
+smallest object is: 1
+Point servo to angle: 39 degrees
+Object#  Angle  Distance  Width
+1        35      116.48      35
+2        39      131.56      39
+
+smallest object is: 1
+Point servo to angle: 39 degrees
+Object#  Angle  Distance  Width
+1        35      116.48      35
+2        39      131.56      39
+
+smallest object is: 1
+Point servo to angle: 39 degrees
+Degrees distance (cm)
+0 141.01
+2 140.71
+4 140.48
+6 140.74
+8 140.81
+10 140.14
+12 140.59
+14 140.62
+16 140.90
+18 49.93
+20 49.47
+22 49.02
+24 47.69
+26 47.64
+28 47.21
+30 46.76
+32 46.28
+34 46.28
+36 46.29
+38 46.26
+40 46.69
+42 46.69
+44 47.13
+46 47.60
+48 46.79
+50 47.23
+52 47.73
+54 48.69
+56 48.65
+58 140.48
+60 140.74
+62 140.94
+64 140.85
+66 140.22
+68 141.37
+70 140.86
+72 140.16
+74 140.75
+76 140.13
+78 140.70
+80 140.58
+82 140.83
+84 140.32
+86 141.79
+88 140.34
+90 141.12
+92 140.34
+94 141.07
+96 140.90
+98 141.11
+100 135.72
+102 140.97
+104 140.66
+106 140.64
+108 140.70
+110 140.30
+112 140.86
+114 141.76
+116 55.16
+118 51.69
+120 50.84
+122 49.41
+124 49.37
+126 48.92
+128 48.83
+130 48.81
+132 48.38
+134 48.37
+136 48.37
+138 48.78
+140 47.91
+142 48.32
+144 47.86
+146 48.36
+148 48.34
+150 48.79
+152 48.79
+154 48.80
+156 48.92
+158 49.31
+160 49.74
+162 49.83
+164 49.90
+166 52.08
+168 140.36
+170 140.99
+172 140.83
+174 141.04
+176 140.73
+178 141.47
+180 140.79

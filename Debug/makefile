@@ -11,12 +11,11 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./Timer.obj" \
-"./button.obj" \
+"./lab5part1.obj" \
 "./lcd.obj" \
-"./main.obj" \
 "./open_interface.obj" \
-"./part4.obj" \
 "./tm4c1236h6pm_startup_ccs.obj" \
+"../libcybotUART.lib" \
 "../tm4c1236h6pm.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -127,29 +126,29 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-lab3.out 
+lab5.out 
 
 EXE_OUTPUTS__QUOTED += \
-"lab3.out" 
+"lab5.out" 
 
 
 # All Target
-all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "lab3.out"
+all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+	@$(MAKE) --no-print-directory -Onone "lab5.out"
 
 # Tool invocations
-lab3.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+lab5.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1236H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"lab3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="lab3_linkInfo.xml" --rom_model -o "lab3.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1236H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"lab5.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="lab5_linkInfo.xml" --rom_model -o "lab5.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Timer.obj" "button.obj" "lcd.obj" "main.obj" "open_interface.obj" "part4.obj" "tm4c1236h6pm_startup_ccs.obj" 
-	-$(RM) "Timer.d" "button.d" "lcd.d" "main.d" "open_interface.d" "part4.d" "tm4c1236h6pm_startup_ccs.d" 
+	-$(RM) "Timer.obj" "lab5part1.obj" "lcd.obj" "open_interface.obj" "tm4c1236h6pm_startup_ccs.obj" 
+	-$(RM) "Timer.d" "lab5part1.d" "lcd.d" "open_interface.d" "tm4c1236h6pm_startup_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

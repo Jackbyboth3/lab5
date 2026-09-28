@@ -8,58 +8,49 @@ SHELL = cmd.exe
 CMD_SRCS += \
 ../tm4c1236h6pm.cmd 
 
+LIB_SRCS += \
+../libcybotUART.lib 
+
 C_SRCS += \
 ../Timer.c \
-../button.c \
+../lab5part1.c \
 ../lcd.c \
-../main.c \
 ../open_interface.c \
-../part4.c \
 ../tm4c1236h6pm_startup_ccs.c 
 
 C_DEPS += \
 ./Timer.d \
-./button.d \
+./lab5part1.d \
 ./lcd.d \
-./main.d \
 ./open_interface.d \
-./part4.d \
 ./tm4c1236h6pm_startup_ccs.d 
 
 OBJS += \
 ./Timer.obj \
-./button.obj \
+./lab5part1.obj \
 ./lcd.obj \
-./main.obj \
 ./open_interface.obj \
-./part4.obj \
 ./tm4c1236h6pm_startup_ccs.obj 
 
 OBJS__QUOTED += \
 "Timer.obj" \
-"button.obj" \
+"lab5part1.obj" \
 "lcd.obj" \
-"main.obj" \
 "open_interface.obj" \
-"part4.obj" \
 "tm4c1236h6pm_startup_ccs.obj" 
 
 C_DEPS__QUOTED += \
 "Timer.d" \
-"button.d" \
+"lab5part1.d" \
 "lcd.d" \
-"main.d" \
 "open_interface.d" \
-"part4.d" \
 "tm4c1236h6pm_startup_ccs.d" 
 
 C_SRCS__QUOTED += \
 "../Timer.c" \
-"../button.c" \
+"../lab5part1.c" \
 "../lcd.c" \
-"../main.c" \
 "../open_interface.c" \
-"../part4.c" \
 "../tm4c1236h6pm_startup_ccs.c" 
 
 
