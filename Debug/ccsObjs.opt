@@ -1,8 +1,10 @@
 "./Timer.obj"
-"./lab5part1.obj"
+"./lab5part2.obj"
+"./lab5part3.obj"
 "./lcd.obj"
 "./open_interface.obj"
 "./tm4c1236h6pm_startup_ccs.obj"
+"../libcybotScan.lib"
 "../libcybotUART.lib"
 "../tm4c1236h6pm.cmd"
 -llibc.a

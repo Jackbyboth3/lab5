@@ -1,0 +1,65 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.30 12:05:35 =~=~=~=~=~=~=~=~=~=~=~=
+
+smallest object is: 1
+Point servo to angle: 0 degrees
+1        115      48.82      130
+
+smallest object is: 1
+Point servo to angle: 115 degrees
+91        1074785620      0.00      0
+
+smallest object is: 1
+Point servo to angle: 0 degrees
+Object#  Angle  Distance  Width
+1        115      48.79      130
+
+smallest object is: 1
+Point servo to angle: 115 degrees
+Object#  Angle  Distance  Width
+1        1      74.91      2
+2        79      49.42      139
+3        165      78.20      12
+
+smallest object is: 1
+Point servo to angle: 1 degrees
+Object#  Angle  Distance  Width
+1        80      47.76      137
+
+smallest object is: 1
+Point servo to angle: 80 degrees
+Object#  Angle  Distance  Width
+1        30      57.61      60
+2        107      56.53      51
+3        173      75.63      8
+
+smallest object is: 3
+Point servo to angle: 173 degrees
+Object#  Angle  Distance  Width
+1        75      78.08      147
+
+smallest object is: 1
+Point servo to angle: 75 degrees
+Object#  Angle  Distance  Width
+1        29      30.03      58
+2        140      35.79      79
+
+smallest object is: 1
+Point servo to angle: 29 degrees
+Object#  Angle  Distance  Width
+1        27      37.59      46
+2        137      31.34      85
+
+smallest object is: 1
+Point servo to angle: 27 degrees
+Object#  Angle  Distance  Width
+1        28      31.04      56
+2        130      30.94      50
+
+smallest object is: 2
+Point servo to angle: 130 degrees
+Object#  Angle  Distance  Width
+1        29      36.04      58
+2        137      104.47      85
+
+smallest object is: 1
+Point servo to angle: 29 degrees

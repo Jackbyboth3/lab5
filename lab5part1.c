@@ -12,7 +12,7 @@
 
 #include "sensor-data5.h"
 
-#include "lcd.h"
+
 #include "cyBot_uart.h"
 #include "Timer.H"
 #define DATA 90
