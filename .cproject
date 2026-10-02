@@ -82,7 +82,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="lab5part2.c|lab5part1.c|part5.c|button.c|main.c|part1.c|part2.c|part3.c|part4.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="lab5part3.c|lab5part2.c|lab5part1.c|part5.c|button.c|main.c|part1.c|part2.c|part3.c|part4.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

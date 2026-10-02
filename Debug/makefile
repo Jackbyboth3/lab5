@@ -11,9 +11,9 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./Timer.obj" \
-"./lab5part2.obj" \
-"./lab5part3.obj" \
+"./lab5part3(2).obj" \
 "./lcd.obj" \
+"./movement.obj" \
 "./open_interface.obj" \
 "./tm4c1236h6pm_startup_ccs.obj" \
 "../libcybotScan.lib" \
@@ -149,8 +149,8 @@ lab5.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Timer.obj" "lab5part2.obj" "lab5part3.obj" "lcd.obj" "open_interface.obj" "tm4c1236h6pm_startup_ccs.obj" 
-	-$(RM) "Timer.d" "lab5part2.d" "lab5part3.d" "lcd.d" "open_interface.d" "tm4c1236h6pm_startup_ccs.d" 
+	-$(RM) "Timer.obj" "lab5part3(2).obj" "lcd.obj" "movement.obj" "open_interface.obj" "tm4c1236h6pm_startup_ccs.obj" 
+	-$(RM) "Timer.d" "lab5part3(2).d" "lcd.d" "movement.d" "open_interface.d" "tm4c1236h6pm_startup_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

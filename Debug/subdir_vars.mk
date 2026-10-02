@@ -14,49 +14,49 @@ LIB_SRCS += \
 
 C_SRCS += \
 ../Timer.c \
-../lab5part2.c \
-../lab5part3.c \
+../lab5part3(2).c \
 ../lcd.c \
+../movement.c \
 ../open_interface.c \
 ../tm4c1236h6pm_startup_ccs.c 
 
 C_DEPS += \
 ./Timer.d \
-./lab5part2.d \
-./lab5part3.d \
+./lab5part3(2).d \
 ./lcd.d \
+./movement.d \
 ./open_interface.d \
 ./tm4c1236h6pm_startup_ccs.d 
 
 OBJS += \
 ./Timer.obj \
-./lab5part2.obj \
-./lab5part3.obj \
+./lab5part3(2).obj \
 ./lcd.obj \
+./movement.obj \
 ./open_interface.obj \
 ./tm4c1236h6pm_startup_ccs.obj 
 
 OBJS__QUOTED += \
 "Timer.obj" \
-"lab5part2.obj" \
-"lab5part3.obj" \
+"lab5part3(2).obj" \
 "lcd.obj" \
+"movement.obj" \
 "open_interface.obj" \
 "tm4c1236h6pm_startup_ccs.obj" 
 
 C_DEPS__QUOTED += \
 "Timer.d" \
-"lab5part2.d" \
-"lab5part3.d" \
+"lab5part3(2).d" \
 "lcd.d" \
+"movement.d" \
 "open_interface.d" \
 "tm4c1236h6pm_startup_ccs.d" 
 
 C_SRCS__QUOTED += \
 "../Timer.c" \
-"../lab5part2.c" \
-"../lab5part3.c" \
+"../lab5part3(2).c" \
 "../lcd.c" \
+"../movement.c" \
 "../open_interface.c" \
 "../tm4c1236h6pm_startup_ccs.c" 
 
